@@ -28,7 +28,7 @@ public class ServicoUsuario {
         usuario.setNome(nome);
         Example<Usuario> exemplo = Example.of(usuario);
 
-        return usuarioRepository.findOne(exemplo).orElse(null);
+        return usuarioRepository.findOne(exemplo).orElse(null); // acha se só estiver um usuário com esse nome
     }
 
     public List<Usuario> buscaTodosComNome(String nome) {
